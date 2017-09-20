@@ -1,0 +1,61 @@
+/*reset css  重置样式*/
+*,
+::before,
+::after{
+    /*所有的标签和伪元素*/
+    margin: 0;
+    padding: 0;
+    /*防止流式容器内容溢出*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /*点击屏幕 高亮效果  清除高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    font-size: 14px;
+    font-family: Microsoft YaHei,sans-serif;
+    color: #333;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+input,textarea{
+    border: none;
+    outline: none;
+    resize: none;
+    /*清除默认样式 立体效果*/
+    -webkit-appearance: none;
+}
+ul{
+    list-style: none;
+}
+/*common css 公共样式 模块样式*/
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+
+/*需要压缩一倍  目的是解决移动端图标失真问题*/
+[class^="icon_"],[class*=" icon_"]{
+    background: url("../images/sprites.png") no-repeat;
+    background-size: 200px 200px;
+}
+
+.ml10{
+    margin-left: 10px;
+}
+.mr10{
+    margin-right: 10px;
+}

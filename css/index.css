@@ -1,0 +1,278 @@
+body{
+    background: #f5f5f5;
+}
+/*版心*/
+.jd_container{
+    width: 100%;
+    max-width: 640px; /*根据设计稿*/
+    min-width: 320px; /*最小设备宽度*/
+    margin: 0 auto;
+
+    height: 1000px;
+}
+
+/*搜索栏*/
+.jd_search{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 40px;
+    width: 100%;
+
+    z-index: 999;
+}
+.jd_search .jd_search_box{
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    height: 100%;
+    margin: 0 auto;
+    background: #d8505c;
+    position: relative;
+}
+
+.jd_search .jd_search_box .icon_logo{
+    width: 60px;
+    height: 36px;
+    position: absolute;
+    left: 10px;
+    top: 4px;
+
+    background-position: 0 -103px;
+}
+.jd_search .jd_search_box .login{
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+}
+.jd_search .jd_search_box form{
+    width: 100%;
+    padding-left: 75px;
+    padding-right: 50px;
+}
+.jd_search .jd_search_box form input{
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    margin-top: 5px;
+    padding-left: 30px;
+}
+.jd_search .jd_search_box form .icon_search{
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    left: 80px;
+    top: 10px;
+
+    background-position: -60px -109px;
+}
+
+/*轮播图*/
+/*百分比宽度 基于父容器的内容宽度*/
+.jd_banner{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.jd_banner ul:first-child{
+    width: 1000%;
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+}
+.jd_banner ul:first-child li{
+    width: 10%;
+    float: left;
+}
+.jd_banner ul:first-child li a{
+    width: 100%;
+    display: block;
+}
+/*高度可以随着宽度的变化自适应*/
+.jd_banner ul:first-child li a img{
+    width: 100%;
+    display: block;
+}
+.jd_banner ul:last-child{
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    margin-left:-59px;
+}
+.jd_banner ul:last-child li{
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    margin-left: 10px;
+    float: left;
+}
+.jd_banner ul:last-child li:first-child{
+    margin-left: 0;
+}
+.jd_banner ul:last-child li.now{
+    background: #fff;
+}
+
+/*导航栏*/
+.jd_nav{
+    width: 100%;
+    padding-top: 10px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.jd_nav ul{
+    width: 100%;
+}
+.jd_nav ul li{
+    width: 25%;
+    float: left;
+}
+.jd_nav ul li a{
+    display: block;
+}
+.jd_nav ul li a img{
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+}
+.jd_nav ul li a p{
+    text-align: center;
+    padding: 5px 0;
+    font-size: 12px;
+}
+
+/*商品区块*/
+.jd_product{
+    width: 100%;
+    padding: 0 5px;
+}
+/*商品公用盒子*/
+.jd_product_box{
+    margin-top: 10px;
+    box-shadow: 0 0 1px #ccc;
+    min-height: 200px;
+    background:#fff;
+}
+.jd_product_box .pro_tit{
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #ddd;
+}
+.jd_product_box .pro_tit.no_border{
+    border-bottom: none;
+}
+.jd_product_box .pro_tit h3{
+    font-weight: normal;/*正常的字体*/
+    position: relative;
+    text-indent: 20px;
+}
+.jd_product_box .pro_tit h3::before{
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 11px;
+
+    width: 3px;
+    height: 12px;
+    background: #d8505c;
+}
+.jd_product_box .pro_con{}
+
+
+/*秒杀区块 标题*/
+.sk_icon{
+    float: left;
+    margin-left: 10px;
+    margin-top: 7px;
+
+    width: 16px;
+    height: 20px;
+    background: url("../images/seckill-icon.png") no-repeat;
+    background-size: 16px 20px;
+}
+.sk_name{
+    float: left;
+    margin-left: 10px;
+    color:#d8505c;
+}
+.sk_time{
+    float: left;
+    margin-left: 10px;
+}
+.sk_time span{
+    float: left;
+    margin-top: 7px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    margin-left: 3px;
+}
+.sk_time span:nth-child(3n){
+    background: #fff;
+    color: #333;
+    width: 3px;
+}
+/*秒杀区块 内容*/
+.sk_product{
+    padding: 10px 0;
+}
+.sk_product li{
+    width: 33.3333%;
+    float: left;
+}
+.sk_product li a{
+    width: 100%;
+    display: block;
+    border-right: 1px solid #ccc;
+}
+.sk_product li:last-child a{
+    border-right: none;
+}
+.sk_product li a img{
+    width: 64%;
+    margin: 0 auto;
+    display: block;
+}
+.sk_product li p{
+    text-align: center;
+    font-size: 12px;
+    padding: 3px 0;
+}
+.sk_product li .now_price{
+    color: #d8505c;
+}
+.sk_product li .old_price{
+    color: #666;
+    text-decoration: line-through;
+}
+
+
+/*组合样式*/
+.pro_w{
+     width: 50%;
+ }
+.pro_w img{
+    width: 100%;
+    display: block;
+}
+
+.b_right{
+    border-right: 1px solid #ccc;
+}
+.b_left{
+    border-left: 1px solid #ccc;
+}
+.b_bottom{
+    border-bottom: 1px solid #ccc;
+}
